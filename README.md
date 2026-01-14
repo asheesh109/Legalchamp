@@ -1,18 +1,4 @@
 
-
-<h1 align="center" id="title">de_coders</h1>
-
-<p align="center"><img src="https://socialify.git.ci/Raaaghavagrawal/hackOclock/image?font=KoHo&language=1&name=1&owner=1&stargazers=1&theme=Dark" alt="project-image"></p>
-
-<h2>❤️ Team Members</h2>
-
-  
-
-
-*   Roohani Sharma
-*   Shivani Bhati
-*   Salil Gupta
-*   Raghav Agrawal 
 <h1 align="center">🚀 Demo</h1>
 
 
@@ -49,9 +35,6 @@ Here're some of the project's best features:
 ![image](https://github.com/user-attachments/assets/b79683ff-d0b1-4aaa-985b-b928a91dea8c)
 
 
-<h2 align="center">Flappy Birds Game:</h2>
-
-![Screenshot 2025-01-23 000505](https://github.com/user-attachments/assets/69da2eb7-0181-4368-9e93-93b3f9adff4a)
 
 ## 📺License
 
