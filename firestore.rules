@@ -1,0 +1,26 @@
+  rules_version = '2';
+  service cloud.firestore {
+    match /databases/{database}/documents {
+      // User profiles
+      match /users/{userId} {
+        allow read: if request.auth != null;
+        allow create: if request.auth != null && request.auth.uid == userId;
+        allow update: if request.auth != null && request.auth.uid == userId;
+        allow delete: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Feedback documents
+      match /feedback/{feedbackId} {
+        // Anyone logged in can create feedback
+        allow create: if request.auth != null && 
+                      request.resource.data.userId == request.auth.uid;
+        
+        // Users can read/update/delete only their own feedback
+        allow read, update, delete: if request.auth != null && 
+                                    resource.data.userId == request.auth.uid;
+        
+        // Admins can read all feedback (you would need to set up admin roles)
+        // allow read: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+      }
+    }
+  } 
